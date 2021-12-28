@@ -11,9 +11,12 @@ export const contactsSlice = createSlice({
     name: 'contacts',
     initialState,
     reducers: {
-        addContact: entityAdapter.addOne
+        addContact: entityAdapter.addOne,
+        removeContact:entityAdapter.removeOne,
+        removeAllContact:entityAdapter.removeAll,
+        updateContact:entityAdapter.updateOne
     }
 
 })
-export const { addContact } = contactsSlice.actions;
+export const { addContact,removeContact,removeAllContact , updateContact} = contactsSlice.actions;
 export default contactsSlice.reducer
